@@ -1,0 +1,69 @@
+/* Obsidian f-Matter Settings & Modal Styles (Native CSS Variables Only) */
+
+.fmatter-settings .setting-items {
+	overflow: visible;
+}
+
+/* Top 3-Tab Navigation Bar (Underline Tabs) */
+.fmatter-tab-bar {
+	display: flex;
+	gap: 4px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	margin-bottom: 16px;
+}
+
+.fmatter-tab-button {
+	background: transparent !important;
+	border: none !important;
+	border-bottom: 2px solid transparent !important;
+	box-shadow: none !important;
+	border-radius: 0;
+	height: auto !important;
+	padding: 8px 16px;
+	color: var(--text-muted);
+	cursor: pointer;
+	font-size: var(--font-ui-medium);
+	transition: color 120ms ease, border-bottom-color 120ms ease;
+}
+
+.fmatter-tab-button:hover {
+	background: transparent !important;
+	color: var(--text-normal);
+}
+
+.fmatter-tab-button.is-active {
+	color: var(--interactive-accent);
+	border-bottom-color: var(--interactive-accent) !important;
+	font-weight: 500;
+}
+
+/* Native ExtraButton destructive hover tint */
+.fmatter-danger-icon:hover {
+	color: var(--text-error);
+}
+
+/* Empty state setting row without right control area */
+.fmatter-empty-setting .setting-item-control {
+	display: none;
+}
+
+/* Subtle placeholder contrast */
+.fmatter-input::placeholder {
+	color: var(--text-faint);
+	opacity: 0.65;
+}
+
+/* Inline validation feedback in AddMappingModal */
+.fmatter-modal-error {
+	display: none;
+	margin-top: 8px;
+	padding: 6px 10px;
+	border-radius: var(--radius-s);
+	font-size: var(--font-ui-smaller);
+	color: var(--text-error);
+	background-color: color-mix(in srgb, var(--text-error) 10%, transparent);
+}
+
+.fmatter-modal-error.is-visible {
+	display: block;
+}
